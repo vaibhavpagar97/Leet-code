@@ -1,0 +1,32 @@
+package Easy_database_questions;
+import java.util.*;
+
+public class Palindrome_of_numbers {
+	
+	public static void main (String[] args) {
+			//Scanner sc = new Scanner(System.in);
+			//int a = sc.nextInt();
+			int a = 55;
+		int temp ;
+		temp = a ;     // here temp needed to compare further with reversed value, since a will get zero in while loop,thats why we need temp ...
+			int b = 0 ;
+			while(a>0) {
+				int c = a%10;
+				b = (b*10) + c ;
+				a = a/10;
+				
+				
+			}
+			if(temp==b) {
+				System.out.println("true");
+			}
+			else {
+				System.out.println("not true");
+			}
+		System.out.println(a + "" + b);
+			
+
+	}
+	
+
+}
