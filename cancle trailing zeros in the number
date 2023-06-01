@@ -1,0 +1,37 @@
+package Easy_database_questions;
+
+import java.util.Arrays;
+
+public class Print_the_no_by_cancelingout_trailing_zeros {
+
+	public static void main(String[] args) {
+
+		int a = 73733000;
+		int count = 0;
+		String str = Integer.toString(a);
+
+		for (int i = str.length() - 1; i >= 0; --i) {
+			if (str.charAt(i) == 48) {
+				++count;
+
+			}
+		}
+		System.out.println(count);
+		char[] str1 = new char[str.length() - count];
+
+		for (int j = 0; j < str.length() - count; j++) {
+			str1[j] = str.charAt(j);
+
+		}
+
+		System.out.println(Arrays.toString(str1));
+		String str3 = Arrays.toString(str1);
+
+		int h = Integer.parseInt(str3);
+	}
+
+}
+
+//to convert any array to string use String str = Array.toString(arr);
+//to convert any string to array use split ...
+//convert string in char array using for loop...
