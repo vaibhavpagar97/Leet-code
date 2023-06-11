@@ -1,0 +1,25 @@
+package Easy_database_questions;
+
+public class Roman {
+	
+	public static void main(String[] args) {
+		
+		int[] arr={1,3,5,7,14};
+		
+		int a = 9 ;
+		
+		for( int i = 0 ; i<arr.length-1 ; i++ ) {
+			if(a < arr[i+1] && a > arr[i] ) {
+			System.out.println(i+1);
+				
+			}
+			else {
+				continue;
+				//System.out.println("jhdf");
+			}
+		}
+	}
+	
+	
+
+}
