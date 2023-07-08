@@ -8,6 +8,7 @@ public class AddTwo {
 	int target =9 ;
 	
 	for (int i = 0 ;i<arr.length-1;i++) {             // i jar length minus ghetla ani nntr jr kahi i mdhe + 
+need one more for
 		 if((arr[i]+arr[i+1])==target){		         //kel asel tr index out ch error yet nahi
 		System.out.println(arr[i] + " " + arr[i+1]);
 			
@@ -15,4 +16,23 @@ public class AddTwo {
 	}
 }
 }
+}
+
+//different solution
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int n=nums.length;
+        Map<Integer,Integer> map=new HashMap<>();
+        int[] result=new int[2];                           //empty array
+        for(int i=0;i<n;i++){
+            if(map.containsKey(target-nums[i])){            //main condition, if the number subtracted from target is present in hash map then return array
+                result[1]=i;
+                result[0]=map.get(target-nums[i]);
+                return result;
+            }
+            map.put(nums[i],i);
+        }
+        return result;
+    }
 }
